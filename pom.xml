@@ -49,15 +49,27 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.0.0</version>
+                <dependencies>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.scm/maven-scm-provider-jgit -->
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-jgit</artifactId>
+                        <version>2.0.0</version>
+                        <scope>runtime</scope>
+                    </dependency>
+
+
+                </dependencies>
             </plugin>
         </plugins>
     </build>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/Wruthless/maven-release-plugin.git</developerConnection>
+        <connection>scm:git:git@github.com:Wruthless/maven-release-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:Wruthless/maven-release-plugin.git</developerConnection>
         <url>https://github.com/Wruthless/maven-release-plugin</url>
-      <tag>maven-release-plugin-1.0</tag>
-  </scm>
+        <tag>maven-release-plugin-1.0</tag>
+    </scm>
 
     <dependencies>
         <dependency>
